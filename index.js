@@ -1,44 +1,9 @@
-// var // не используется
-// const
+const testString = 'Hello JS Test';
+const tabString = 'Это первая строка.\n\tЭто вторая строка';
+const helloString = 'Маша сказала:\"Привеет!\"'
 
-let box; // Объявление переменной
-box = 20; // Инициализация переменной
-console.log('box=', typeof box, box); // Логирование переменной
+alert(testString); console.log(testString);
+alert(tabString); console.log(tabString);
+alert(helloString); console.log(helloString);
 
-let importantValue;
-importantValue = 'Главная строка';
-console.log('importantValue=', typeof importantValue, importantValue);
-
-let value;
-value = 30;
-console.log('value=', typeof value, value);
-
-value = true;
-console.log('value=', typeof value, value);
-
-const num1 = 10;
-const num2 = 35;
-
-console.log(num1 + num2);
-
-console.log(num1 - num2);
-
-console.log(1);
-
-const result = false;
-if (result) {
-  console.log('ok');s
-} else {
-  console.log('not ok')
-}
-console.log(3);
-
-
-
-
-
-console.log('Я джава девелопер!');
-console.log(undefined);
-console.log(null);
-console.log(true);
-console.log(false);
+console.log(23 % 6);
