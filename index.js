@@ -1,43 +1,29 @@
-const testString = 'Hello JS Test';
-const tabString = 'Это первая строка.\n\tЭто вторая строка';
-const helloString = 'Маша сказала:\"Привеет!\"'
+const a = 5;
+const b = 7;
+console.log(a * b);
 
-alert(testString); console.log(testString);
-alert(tabString); console.log(tabString);
-alert(helloString); console.log(helloString);
+const c = 32;
+const d = 4;
+console.log(c / d);
 
-const procent = 23 % 6;
-console.log(procent);
+const e = 12;
+const f = 4;
+console.log(e + f);
 
-let iter = 18;
+const number = 11;
+const boolean = true;
+const string = 'Java Script';
+const stringNum = '100';
+console.log(number, boolean, string, stringNum);
 
-console.log(iter >= 10 && iter < 20);
+let resultN = 1;
 
-let oder = 7;
-
-console.log(oder >= 10 || oder < 0);
-
-let result;
-
-result = 5;
-
-result += 10; //===1 result = result + 10;
-result -= 5; //=== result = result - 5;
-result *= 2; //=== result = result * 2;
-result /= 5; //=== result = result / 5;
-result **= 3; //=== result = result ** 3;
-
-console.log(result);
-// console.log(12 == '12');
-// console.log(12 != '12');
-console.log(10 > 8 && NaN === NaN);
-
-const userInput = prompt('Введите любые символы или значения'); // возвращает строку и преобразует в строчные данные;
+console.log(resultN += 11);
+console.log(resultN -= 11);
+console.log(resultN *= 11);
+console.log(resultN /= 11);
+console.log(resultN **= 2);
+console.log(resultN += 1);
+console.log(resultN -= 1);
 
 
-
-console.log(userInput);
-
-const verdict = isNaN(10); // возвращает не число т.е. true или false;
- 
-console.log(verdict);
