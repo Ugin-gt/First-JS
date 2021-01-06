@@ -26,4 +26,16 @@ console.log(resultN **= 2);
 console.log(resultN += 1);
 console.log(resultN -= 1);
 
+// const userInput = prompt('Введите число:');
 
+// alert('Вы ввели число: ' + userInput);
+
+const userInputNumber1 = prompt('Введите первое число:');
+const userInputNumber2 = prompt('Введите второе число:');
+
+const userNumber1 = +userInputNumber1; // приведение унарным + к числовому значению
+const userNumber2 = +userInputNumber2;
+
+const result = userNumber1 + userNumber2;
+
+alert('Сумма чисел равна = ' + result);
