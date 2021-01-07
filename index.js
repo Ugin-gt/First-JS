@@ -24,5 +24,37 @@ const userName = prompt('What is Your name?');
 const SayHelloTo = function (name) {
   alert('Hello Your Majesty, ' + name)
 };
-
 SayHelloTo(userName);
+
+const a = 15;
+const b = 20;
+const number = 15;
+
+const minValue = function (a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+};
+
+console.log(minValue(a, b));
+
+const maxValue = function (a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+};
+
+console.log(maxValue(a, b));
+
+const isEven = function (number) {
+  if (isNaN(number)) {
+    return "is NaN";
+  }
+  return number % 2 === 0;
+};
+
+console.log(isEven(number));
