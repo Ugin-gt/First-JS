@@ -1,31 +1,3 @@
-const userInput1 = +prompt('Введите первое число:');
-const userInput2 = +prompt('Введите второе число:');
-
-const getSumOfTwo = function (num1, num2) {
-  //function expression
-
-  const result = num1 + num2;
-  if (!isNaN(result)) {
-    return result;
-  }
-  return false;
-};
-
-const summ = getSumOfTwo(userInput1, userInput2);
-
-if (!summ) {
-  alert('Введите правильно Ваши числа');
-} else {
-  console.log(summ);
-};
-
-const userName = prompt('What is Your name?');
-
-const SayHelloTo = function (name) {
-  alert('Hello Your Majesty, ' + name)
-};
-SayHelloTo(userName);
-
 const a = 15;
 const b = 20;
 const number = 15;
@@ -58,3 +30,40 @@ const isEven = function (number) {
 };
 
 console.log(isEven(number));
+
+/**
+ * 
+ * @param {number} a - first coef
+ * @param {number} b - second coef
+ * @param {number} c - third coef
+ * @returns {null | number []} - result
+ */
+
+const solveSquareEquation = function (a, b, c,) {
+  const checkValues = a - b - c;
+  if (isNaN(checkValues)) {
+    return null;
+  }
+
+  const d = b * b - 4 * a * c;
+
+  if (d < 0) {
+    return null;
+  }
+  if (d === 0) {
+    const x = -b / (2 * a);
+    return [x, x];
+  }
+  if (d > 0) {
+    const dSqrt = d ** (1 / 2);
+
+    const x1 = (-b + dSqrt) / (2 * a);
+    const x2 = (-b - dSqrt) / (2 * a);
+
+    return [x1, x2];
+  }
+};
+
+const result = solveSquareEquation(2, 7, 4);
+
+console.log(result);
