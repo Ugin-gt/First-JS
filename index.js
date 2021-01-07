@@ -19,3 +19,10 @@ if (!summ) {
   console.log(summ);
 };
 
+const userName = prompt('What is Your name?');
+
+const SayHelloTo = function (name) {
+  alert('Hello Your Majesty, ' + name)
+};
+
+SayHelloTo(userName);
