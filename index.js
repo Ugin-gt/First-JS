@@ -23,3 +23,26 @@ if (isNaN(userIput)) {
 }
 
 console.log('end of script');
+
+const userIput2 = +prompt('Выберите позицию из списка меню;\n 1-Чай\n 2-Кофе\n 3-Капуччино');
+
+switch (userIput2) {
+  case 1: {
+    console.log('Ваш Чай');
+    break;
+  }
+  case 2: {
+    console.log('Ваш Кофе');
+    break;
+  }
+  case 3: {
+    console.log('Ваш Капуччино');
+    break;
+  }
+ default: {
+   console.log('А попробуйте еще раз ;)');
+ } 
+};
+
+
+
