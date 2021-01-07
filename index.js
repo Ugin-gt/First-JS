@@ -30,12 +30,19 @@ console.log(resultN -= 1);
 
 // alert('Вы ввели число: ' + userInput);
 
-const userInputNumber1 = prompt('Введите первое число:');
-const userInputNumber2 = prompt('Введите второе число:');
+const getSumOfTwo = function () {
 
-const userNumber1 = +userInputNumber1; // приведение унарным + к числовому значению
-const userNumber2 = +userInputNumber2;
+  const userInputNumber1 = +prompt('Введите первое число:');
+  const userInputNumber2 = +prompt('Введите второе число:');
 
-const result = userNumber1 + userNumber2;
+  const result = userInputNumber1 + userInputNumber2;
+  const verdict = isNaN(result);
 
-alert('Сумма чисел равна = ' + result);
+  if (!verdict) {
+    alert('Сумма чисел равна = ' + result);
+  } else {
+    alert('Ошибка! Вы ввели не число.');
+  }
+};
+
+getSumOfTwo();
