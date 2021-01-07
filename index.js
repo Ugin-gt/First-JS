@@ -67,3 +67,23 @@ const solveSquareEquation = function (a, b, c,) {
 const result = solveSquareEquation(2, 7, 4);
 
 console.log(result);
+
+const globalVar = 'Global';
+//  глобальные переменные видны в любой части кода;
+
+if (globalVar) {
+  const ifVar1 = 'ifVar1';
+
+  console.log(ifVar1);
+  console.log(globalVar);
+
+  if (globalVar) {
+    const ifVar2 = 'ifVar2';
+    
+    console.log(ifVar2);
+    console.log(ifVar1);
+    console.log(globalVar);
+
+  }
+}
+console.log(globalVar);
