@@ -1,10 +1,8 @@
 const getUserInput = function () {
   const userInput = prompt('Введите любое значение: ');
 
-  const returnValue = userInput ? userInput : 'Вы ничего не ввели';
-  return returnValue;
+  return userInput;
 };
-
 
 //   if (userInput) {
 //     return userInput;
@@ -14,7 +12,7 @@ const getUserInput = function () {
 
 const result = getUserInput();
 
-console.log(result);
+console.log(result ? 'Вы ввели:' + result : 'Вы ничего не ввели');
 
 
 
