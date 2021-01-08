@@ -1,19 +1,16 @@
 'use strict';
-// let count = 1;
 
-// while (count <= maxTry) {
-//   count++;
-for (let count = 1; count <= maxTry; count++) {
-  const userInput = prompt('Введите пароль: ');
-  if (GOOD_Password === userInput) {
-    alert('Вы ввели верный пароль');
-    break;
+const inputDigitFactorial = +prompt('Введите число для вычисления факториала: ');
+
+function factorial(n) {
+  if (!isNaN(n)) {
+    return n ? n * factorial(n - 1) : 1
   }
-  alert('Вы ввели неверный пароль');
-
-  if (count === maxTry) {
-    alert('Вы использовали максимальное число попыток');
-    break;
+  else {
+    alert('Вы ввели не число!');
   }
 };
+
+alert(inputDigitFactorial + '! = ' + factorial(inputDigitFactorial));
+
 
