@@ -1,19 +1,19 @@
-const getUserInput = function () {
-  const userInput = prompt('Введите любое значение: ');
+'use strict';
 
-  return userInput;
+function sum(a, b) {
+  return a + b;
 };
 
-//   if (userInput) {
-//     return userInput;
+function substract(a, b) {
+  return a - b;
+};
 
-//   } return 'Вы ничего не ввели';
-// };
+function highOrderFunc(num1, num2, funcToPerformOperation) {
+  // const result = funcToPerformOperation(num1, num2);
+  // return result;
+  return funcToPerformOperation(num1, num2);
+};
 
-const result = getUserInput();
+const res1 = highOrderFunc(10, 20, substract);
 
-console.log(result ? 'Вы ввели:' + result : 'Вы ничего не ввели');
-
-
-
-
+console.log(res1);
