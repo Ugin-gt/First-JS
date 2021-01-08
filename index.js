@@ -1,48 +1,48 @@
-const userIput = +prompt('Введите число: ');
+const sum = function (a, b) {
+  return a + b;
+};
+const subtraction = function (a, b) {
+  return a - b;
+};
+const mult = function (a, b) {
+  return a * b;
+};
+const division = function (a, b) {
+  return a / b;
+};
 
-if (isNaN(userIput)) {
+const userInput1 = +prompt('Введите 1-е число:');
+const operation = prompt('Введите знак операции:');
+const userInput2 = +prompt('Введите 2-е число:');
 
-  console.log('Вы ввели не число');
 
-} else if (userIput % 5 === 0) {
-
-  console.log('Делится на 5 без остатка');
-
-} else if (userIput % 3 === 0) {
-
-  console.log('Делится на 3 без остатка');
-
-} else if (userIput % 2 === 0) {
-
-  console.log('Делится на 2 без остатка');
-
-} else {
-
-  console.log('Не делится ни на 5, ни на 3, ни на 2')
+const calculate = function (a, b, sign) {
+  const checkInput = a - b;
+  if (isNaN(checkInput)) {
+    return null;
+  }
+  switch (sign) {
+    case '+': {
+      return sum(a, b);
+    }
+    case '-': {
+      return subtraction(a, b);
+    }
+    case '*': {
+      return mult(a, b);
+    }
+    case '/': {
+      return division(a, b);
+    }
+    default: {
+      return null;
+      
+    }
+  }
 
 }
 
-console.log('end of script');
+const result = calculate(userInput1, userInput2, operation);
 
-const userIput2 = +prompt('Выберите позицию из списка меню;\n 1-Чай\n 2-Кофе\n 3-Капуччино');
-
-switch (userIput2) {
-  case 1: {
-    console.log('Ваш Чай');
-    break;
-  }
-  case 2: {
-    console.log('Ваш Кофе');
-    break;
-  }
-  case 3: {
-    console.log('Ваш Капуччино');
-    break;
-  }
- default: {
-   console.log('А попробуйте еще раз ;)');
- } 
-};
-
-
+console.log('Результат операции ' + result);
 
