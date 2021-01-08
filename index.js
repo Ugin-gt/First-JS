@@ -1,18 +1,21 @@
 'use strict';
 
+const GOOD_Password = 'qwerty123';
+const maxTry = 5;
+
 let count = 0;
 
-while (true) {
-
+while (count < maxTry) {
   count++;
-
-  if (count % 2 === 1) {
-    continue;
+  const userInput = prompt('Введите пароль: ');
+  if (GOOD_Password === userInput) {
+    break;
   }
-  console.log(count);
+  alert('Вы ввели неверный пароль');
 
-
-  if (count > 10) {
+  if (count === maxTry) {
+    alert('Вы использовали максимальное число попыток');
     break;
   }
 };
+
