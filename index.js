@@ -22,3 +22,49 @@ function Cat(name, color, age, isMale, breed) {
 const newCat1 = new Cat('Murzik', 'Red', 5, true, 'Persian');
 const newCat2 = new Cat('Sofa', 'White', 12, false, 'Spinx');
 const newCat3 = new Cat('Bernard', 'Red', 3, true, null);
+
+// Задание создать страны  с значениями 
+// Название, площадь, население чел., определить плотность населения.
+
+function Country(name, area, population) {
+  this.name = name;
+  this.area = area;
+  this.population = population;
+  this.densityOfPopul = function () {
+    return this.population / this.area;
+  };
+};
+
+const ukr = new Country('Ukraine', 576_604, 41_723_998);
+const ger = new Country('Germany', 456_604, 80_624_876);
+
+/* Задание с маркой авто и макс скоростью.
+ Auto (name, maxspeed)
+ .accelerate (60)
+ .slowdown
+ .stop
+*/
+
+function Auto(brand, maxSpeed) {
+  this.brand = brand;
+  this.speed = 0;
+  this.maxSpeed = maxSpeed;
+
+  this.accelerate = function (value) {
+    this.speed += value;
+
+    this.speed > this.maxSpeed ?
+      this.speed = this.maxSpeed : this.speed;
+
+    return this.speed;
+
+  };
+
+  this.stop = function () {
+    this.speed = 0;
+    return this.speed;
+  };
+
+}
+
+const auto = new Auto('BMW M6', 300);
