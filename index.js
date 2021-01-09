@@ -1,21 +1,5 @@
 'use strict';
 
-// const inputDigitFactorial = +prompt('Введите число для вычисления факториала: ');
-
-// function factorial(n) {
-
-//   if (!isNaN(n), !(n < 0)) {
-//     return n ? n * factorial(n - 1) : 1
-//   }
-//   else {
-//     alert('Неверный ввод число < 0');
-//     return false;
-//   }
-// };
-
-// alert(inputDigitFactorial + '! = ' + factorial(inputDigitFactorial));
-
-
 function degree(base, numberOfDegree) {
   if (numberOfDegree < 0) { // for negative degree
     return 1 / degree(base, -numberOfDegree);
@@ -36,5 +20,28 @@ function degree(base, numberOfDegree) {
   return result;
 };
 
+//Обьекты в JS, значения и свойства объектов
 
+const cat={
+  color: 'black',
+  breed: 'Spinx',
+  age: 8,
+  isMale: true,
+  name:'Slide',
+};
+
+console.log(cat);
+
+
+cat.age = cat.age +1; // изменили  существующее свойство на основе существующего
+console.log(cat);
+
+cat.name = 'Test Testovich'; // изменили существующее свойство name
+console.log(cat);
+
+cat.amountOfLegs = 4; // создали новое свойство
+console.log(cat);
+
+delete cat.amountOfLegs //  удалили внесенное свойство
+console.log(cat);
 
