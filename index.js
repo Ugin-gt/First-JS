@@ -74,14 +74,14 @@ const auto = new Auto('BMW M6', 300);
 
 // Использование шаблонных строк `${}  ` 
 
-let a = + prompt('Введите первое число');
-let b = + prompt('Введите второе число');
-(isNaN(a - b))
-  ? alert(`Вы ввели не число. `) :
-  alert(`Результат операции чисел:
-${a} + ${b} = ${a + b}`);
+//  let a = + prompt('Введите первое число');
+// let b = + prompt('Введите второе число');
+// (isNaN(a - b))
+//   ? alert(`Вы ввели не число. `) :
+//   alert(`Результат операции чисел:
+// ${a} + ${b} = ${a + b}`);
 
-//
+// Использование шаблонных строк `${}  ` 
 const user = {
   firstName: 'John',
   lastName: 'Smith',
@@ -111,3 +111,38 @@ function createQuery(path) {
 };
 console.log(createQuery(''));
 
+//Доступ к свойствам объекта через оператор [..]
+// с возможностью вычисления
+
+const object = {
+  'favorite color': 'red',
+  0: 'test value',
+  1: 'test value 2',
+
+};
+console.log(object['favorite color']);
+console.log(object['0']);
+console.log(object[0]);
+
+const search = '1';
+console.log(object[search]);
+
+const strAsKey = '2 * 2 =';
+
+object[strAsKey] = 2 * 2;
+
+
+function createMultiplicationTable() {
+
+  const result = {};
+
+  for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
+
+      result[`${i} * ${j}`] = i * j;
+
+    }
+  };
+  return result;
+  };
+console.log(createMultiplicationTable());
