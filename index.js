@@ -90,7 +90,7 @@ const user = {
 };
 
 function sayHello(userObj) {
-  if (userObj.age >=18) {
+  if (userObj.age >= 18) {
     return (`Hello, Dear ${userObj.firstName} ${userObj.lastName}`)
   }
   return ((`You are not so adult, Dear ${userObj.firstName} ${userObj.lastName}`))
@@ -98,4 +98,16 @@ function sayHello(userObj) {
 
 console.log(sayHello(user));
 
+//
+
+const protocol = 'http://';
+const serverIp = '127.0.0.1:3000';
+const userpath = '/Function-HomeTask/tree/practice';
+
+function createQuery(path) {
+
+  return (`${protocol}${serverIp}${userpath}${path}`);
+
+};
+console.log(createQuery(''));
 
