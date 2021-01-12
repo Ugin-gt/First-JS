@@ -68,3 +68,34 @@ function Auto(brand, maxSpeed) {
 }
 
 const auto = new Auto('BMW M6', 300);
+
+
+
+
+// Использование шаблонных строк `${}  ` 
+
+let a = + prompt('Введите первое число');
+let b = + prompt('Введите второе число');
+(isNaN(a - b))
+  ? alert(`Вы ввели не число. `) :
+  alert(`Результат операции чисел:
+${a} + ${b} = ${a + b}`);
+
+//
+const user = {
+  firstName: 'John',
+  lastName: 'Smith',
+  age: 33,
+  isMale: true,
+};
+
+function sayHello(userObj) {
+  if (userObj.age >=18) {
+    return (`Hello, Dear ${userObj.firstName} ${userObj.lastName}`)
+  }
+  return ((`You are not so adult, Dear ${userObj.firstName} ${userObj.lastName}`))
+};
+
+console.log(sayHello(user));
+
+
